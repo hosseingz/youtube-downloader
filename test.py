@@ -5,7 +5,7 @@ os.system('clear')
 
 def resolution(url):
     yt = YouTube(url)
-    video = yt.streams.all
+    video = yt.streams.filter(file_extension='.mp4')
     for i in video:
         print(i)
 
