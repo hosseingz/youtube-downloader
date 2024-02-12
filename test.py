@@ -5,7 +5,7 @@ os.system('clear')
 
 def resolution(url):
     yt = YouTube(url)
-    video = yt.streams
+    video = yt.streams.all
     for i in video:
         print(i)
 
