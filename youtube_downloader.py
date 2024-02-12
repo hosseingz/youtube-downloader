@@ -35,9 +35,14 @@ os.chdir('YouTube Downloads')
 
 for i, url in enumerate(download_list):
 
-    print(f'Progress: {(i * 100) / len(download_list):.2f}%')
+    while True:
+        try:
+            print(f'Progress: {(i * 100) / len(download_list):.2f}%')
 
-    download(url)
+            download(url)
 
-    os.system('clear')
+            os.system('clear')
+            break
 
+        except:
+            print('error !!! try again \n')
